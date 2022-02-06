@@ -1,0 +1,15 @@
+extends ../layouts/main.pug
+
+
+block container 
+    .container 
+        form(action="/animals/add-animal", method="post")
+            label.label Enter animal name
+            input.input(type="text" placeholder="Enter animal name" name="animal" required)
+            label.label Enter animal description
+            input.input(type="text" placeholder="Enter animal description" name="desc" required)
+            label.label Enter the animal lifespan
+            input.input(type="number" placeholder="Enter animal lifespan" name="lifespan" required)
+            br
+            br
+            button.button.is-success(type="submit") Save achis?

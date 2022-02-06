@@ -1,0 +1,18 @@
+extends ../layouts/main
+
+
+block navend
+    include searchbox
+
+block container
+    section.hero.is-primary
+        .hero-body 
+            if animal
+                .title #{animal}
+                if details
+                    .subtitle #{details}
+                    .subtitle: a.button.is-danger(href="/animals/delete/"+animal) Delete
+                else
+                    .subtitle No animals found with given name
+            else
+                .subtitle Please search with an animal name

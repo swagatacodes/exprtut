@@ -1,0 +1,8 @@
+.navbar-item
+    form(action="/animals", method="get") 
+        .field.has-addons
+            .control: input.input(type="text" placeholder="Type animal name" name="animal")
+            .control: button.button.is-info(type="submit") Search
+.navbar-item
+    a.button.is-success(href="/animals/add-animal") Add Animal
+                    
